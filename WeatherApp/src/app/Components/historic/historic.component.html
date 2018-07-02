@@ -1,0 +1,18 @@
+<div class="table-responsive" style="width: 100%">
+  <table class="table-bordered" style="width: 100%">
+    <thead>
+      <tr>
+        <th>Temperatura</th>
+        <th>Presión</th>
+        <th>Humedad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dat of data">
+        <td>{{dat.Temp}}</td>
+        <td>{{dat.Pressure}}</td>
+        <td>{{dat.Humidity}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -6,7 +6,7 @@ import { CityWeather } from '../../Models/CityWeather';
 @Component({
   selector: 'select-city',
   templateUrl: './select-city.component.html',
-  styleUrls: ['./select-city.component.css'],
+  styleUrls: ['./select-city.component.scss'],
   providers: [Constants, Services]
 })
 export class SelectCityComponent implements OnInit {

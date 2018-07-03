@@ -4,7 +4,7 @@ import { CityWeather } from '../../Models/CityWeather';
 @Component({
   selector: 'historic',
   templateUrl: './historic.component.html',
-  styleUrls: ['./historic.component.css']
+  styleUrls: ['./historic.component.scss']
 })
 export class HistoricComponent implements OnInit, OnChanges {
   @Input() weatData: CityWeather[];

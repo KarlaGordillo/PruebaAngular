@@ -1,3 +1,5 @@
+import { Icon } from "./Icon";
+
 export class CityWeather {
 
     CityName: string;
@@ -6,13 +8,13 @@ export class CityWeather {
     Temp: string;
     TempMin: string;
     TempMax: string;
-    WheatherIcon: string[];
+    WheatherIcon: Icon[];
     Wind: string;
 
     /**
      * Creates a CityWeather entity
      */
-    constructor(cityName: string, humidity: string, pressure: string, temp: string, tempMin: string, tempMax: string, wheatherIcon: string[], wind: string) {
+    constructor(cityName: string, humidity: string, pressure: string, temp: string, tempMin: string, tempMax: string, wheatherIcon: Icon[], wind: string) {
 
         this.CityName = cityName;
         this.Humidity = humidity;

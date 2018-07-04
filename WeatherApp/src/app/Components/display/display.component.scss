@@ -12,3 +12,12 @@ h1{
         margin: auto;
     }
 }
+
+.container {
+    border-radius: 2%;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    color: white;
+    margin-bottom: 2%;
+    // background-image: url('../../../assets/imgs/soleado.jpg');
+}

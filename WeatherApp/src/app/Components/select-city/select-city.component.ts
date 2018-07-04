@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constants } from '../../Constants/constants';
 import { Services } from '../../Services/services';
 import { CityWeather } from '../../Models/CityWeather';
+import { Icon } from '../../Models/Icon';
 
 @Component({
   selector: 'select-city',
@@ -27,14 +28,14 @@ export class SelectCityComponent implements OnInit {
 
   getWeather(city: string) {
     this.createHistorial(city);
-    let icons = [];
+    let icons: Icon[] = [];
     this.httpApi.getWeatherByCity(city).subscribe(
       result => {
         result["weather"].forEach(element => {
-          icons.push(element.icon);
+          let icon: Icon = new Icon(element.icon, element.id);
+          icons.push(icon);
         });
         this.weatherResult = new CityWeather(result["name"], result["main"].humidity, result["main"].pressure, result["main"].temp, result["main"].temp_min, result["main"].temp_max, icons, result["wind"].speed);
-        console.log(this.weatherResult);
         this.httpApi.addCityWeather(city, this.weatherResult);
       }
     );

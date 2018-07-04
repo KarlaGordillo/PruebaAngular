@@ -40,5 +40,3 @@ export class Services {
         return cityWeather;
     }
 }
-
-// api.openweathermap.org/data/2.5/weather?q=Londona7e17c06608591b9ec5041a08c712369

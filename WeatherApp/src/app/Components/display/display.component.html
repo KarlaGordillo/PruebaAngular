@@ -1,6 +1,6 @@
-<div class="container" style="background-color: aquamarine">
+<div class="container" [style.background]="img">
   <h1>{{cityWeather.CityName}}</h1>
-  <div class="iconContainer"><img *ngFor="let icon of cityWeather.WheatherIcon" [src]="icon"/></div>
+  <div class="iconContainer"><img *ngFor="let icon of cityWeather.WheatherIcon" [src]="icon.icon"/></div>
   <div class="row">
     <div class="col-md-3 caracteristicas">
       <h3>Humedad</h3>
